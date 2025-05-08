@@ -1,2 +1,2 @@
 <p>bonjour Angular</p>
-<app-utilisateur [nom]="parent"></app-utilisateur>
+<app-utilisateur (delete)="receiveDelete($event)"  [nom]="parent"></app-utilisateur>

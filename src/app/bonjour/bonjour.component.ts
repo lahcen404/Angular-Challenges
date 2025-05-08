@@ -10,4 +10,7 @@ import { UtilisateurComponent } from "../utilisateur/utilisateur.component";
 })
 export class BonjourComponent {
 parent: string = "Lahcen Parent"
+receiveDelete(id: number){
+  console.log("delete id :" , id)
+}
 }
