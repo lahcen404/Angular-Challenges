@@ -4,6 +4,7 @@ import { BonjourComponent } from "./bonjour/bonjour.component";
 import { UtilisateurComponent } from "./utilisateur/utilisateur.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TacheServiceService } from './tache-service.service';
 
 @Component({
   selector: 'app-root',
@@ -18,4 +19,11 @@ export class AppComponent {
 
   nom: string = "lahcen";
   email: string="lahcen.maskour@gmail.com";
+
+ taches: string[]=[];
+ constructor (private tachesService : TacheServiceService){}
+
+ ngOnInit(){
+  this.taches = this.tachesService.getTaches();
+ }
 }
